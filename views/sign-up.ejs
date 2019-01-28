@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>
+            Welcome to sign up page, unauthorized bitch!
+        </h1>
+        <form action="/sign-up" method="POST">
+            <div>
+                <label for="">
+                    Email
+                    <input type="email"
+                           name="email"
+                           required>
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    Password
+                    <input type="password"
+                           name="password"
+                           required
+                           minlength="6"
+                           autocomplete>
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    Confirm password
+                    <input type="password"
+                           name="confirmPassword"
+                           required
+                           minlength="6"
+                           autocomplete>
+                </label>
+            </div>
+
+            <a href="/login">Log in?</a>
+            <button type="submit">Sign up</button>
+        </form>
+        <% if (error) { %>
+            <div style="color: red;">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+    </body>
+</html>
